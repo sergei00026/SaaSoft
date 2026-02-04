@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "deploy": "npm run build && npm run deploy:gh-pages",
+    "deploy:gh-pages": "npx gh-pages -d dist -t true"
   },
   "dependencies": {
     "element-plus": "^2.13.2",
@@ -27,6 +29,7 @@
     "prettier": "3.8.1",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
+    "vite-plugin-gh-pages": "^1.0.1",
     "vite-plugin-vue-devtools": "^8.0.5",
     "vue-tsc": "^3.2.4"
   },
